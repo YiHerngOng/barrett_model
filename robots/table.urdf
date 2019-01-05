@@ -1,11 +1,25 @@
 <?xml version="1.0"?>
 <robot name="table_no_wheels">
-	<link name="table">
+	<link name="base_link">
 		<visual>
-			<origin xyz="0 0.5 0" rpy="0 0 0"/>
+			<origin xyz="0 0 0.5" rpy="0 0 0"/>
 			<geometry>
-				<mesh filename="package://barrett_model/models/object_meshes/table_no_wheels.dae"/>
+				<box size="0.83 0.70 0.05"/>
 			</geometry>
 		</visual>
 	</link>
+	<link name="cube">
+		<visual>
+			<origin xyz="0 0 0.565" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.08 0.08 0.08"/>
+				<!-- <mesh filename="package://barrett_model/models/object_meshes/cube_h8_w8_e8_1.stl"/> -->
+			</geometry>
+		</visual>
+	</link>
+
+	<joint name="scene" type="fixed">
+		<parent link="base_link"/>
+		<child link="cube"/>
+	</joint>
 </robot>

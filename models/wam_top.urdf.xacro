@@ -12,7 +12,8 @@
   <xacro:include filename="$(find barrett_model)/models/hand.urdf.xacro"/>
   <!-- Definitions for the barrett ball -->
   <xacro:include filename="$(find barrett_model)/models/ball.urdf.xacro"/>
-
+  <!-- Definitions for the table and cube -->
+  <xacro:include filename="$(find barrett_model)/robots/table.urdf.xacro"/>
   <!-- Materials -->
   <material name="WAMGrey">
     <color rgba="0.7 0.7 0.7 1.0"/>
